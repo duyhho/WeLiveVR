@@ -1,0 +1,198 @@
+{
+  "project_info": {
+    "project_number": "281588155869",
+    "project_id": "eastside-vaccine",
+    "storage_bucket": "eastside-vaccine.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281588155869:android:a97f62a9b1b3b9bb1be234",
+        "android_client_info": {
+          "package_name": "com.UMKC.WeLiveVR"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281588155869-5hmgjuqgaagk6495qfn1iqdqv6201247.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAbhzrucRXmMnZv7Lhc2EWkC218sF5oKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281588155869-5hmgjuqgaagk6495qfn1iqdqv6201247.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "281588155869-rt4tqgk32as0fvmsoukd9m8kn12iq9n9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.chatbot"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281588155869:android:c60092aa0f7c13351be234",
+        "android_client_info": {
+          "package_name": "com.chatbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281588155869-5hmgjuqgaagk6495qfn1iqdqv6201247.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAbhzrucRXmMnZv7Lhc2EWkC218sF5oKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281588155869-5hmgjuqgaagk6495qfn1iqdqv6201247.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "281588155869-rt4tqgk32as0fvmsoukd9m8kn12iq9n9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.chatbot"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281588155869:android:e0aad14a17f73fac1be234",
+        "android_client_info": {
+          "package_name": "com.gifted_chatbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281588155869-5hmgjuqgaagk6495qfn1iqdqv6201247.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAbhzrucRXmMnZv7Lhc2EWkC218sF5oKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281588155869-5hmgjuqgaagk6495qfn1iqdqv6201247.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "281588155869-rt4tqgk32as0fvmsoukd9m8kn12iq9n9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.chatbot"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281588155869:android:255d46747f6586dc1be234",
+        "android_client_info": {
+          "package_name": "com.umkc.welistenvr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281588155869-5hmgjuqgaagk6495qfn1iqdqv6201247.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAbhzrucRXmMnZv7Lhc2EWkC218sF5oKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281588155869-5hmgjuqgaagk6495qfn1iqdqv6201247.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "281588155869-rt4tqgk32as0fvmsoukd9m8kn12iq9n9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.chatbot"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281588155869:android:ad123b99260107bb1be234",
+        "android_client_info": {
+          "package_name": "com.welisten"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281588155869-98n62okcg6df87u54k0f1qgffc5nt23e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.welisten",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "281588155869-5hmgjuqgaagk6495qfn1iqdqv6201247.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAbhzrucRXmMnZv7Lhc2EWkC218sF5oKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281588155869-5hmgjuqgaagk6495qfn1iqdqv6201247.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "281588155869-rt4tqgk32as0fvmsoukd9m8kn12iq9n9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.chatbot"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
