@@ -281,6 +281,7 @@ MonoBehaviour:
   m_AttachPointCompatibilityMode: 0
   attachTransformLeft: {fileID: 199780136}
   attachTransformRight: {fileID: 1953788834}
+  trocarController: {fileID: 4776359532034257253}
 --- !u!1 &6026767801758026138
 GameObject:
   m_ObjectHideFlags: 0

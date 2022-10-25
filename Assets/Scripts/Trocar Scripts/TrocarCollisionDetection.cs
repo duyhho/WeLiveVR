@@ -12,6 +12,9 @@ public class TrocarCollisionDetection : MonoBehaviour
     // public TextMeshProUGUI pathStatusText;
     // public Text pathStatusText;
     public MeshRenderer renderer;
+    public bool playSoundWhenCollided = true;
+
+
     void Start()
     {
             // pathStatusText.SetText("You are on the right path!");
@@ -41,6 +44,11 @@ public class TrocarCollisionDetection : MonoBehaviour
                 Transform trocarController = other.gameObject.transform;
                 Debug.Log(trocarController);
                 trocarController.GetComponent<TrocarController>().ChangeColor(1);
+                trocarController.GetComponent<TrocarController>().SendHaptic();
+
+                if (playSoundWhenCollided) {
+                    trocarController.GetComponent<TrocarController>().PlayErrorTone();
+                }
                 Invoke("ResetRenderer", 3);//this will happen after 2 seconds
             }
 

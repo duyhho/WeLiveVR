@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/IRONHEAD Games/Scenes/Solutions/Multiplayer/World_School Multiplayer.unity
     guid: af78a57a3718f9249ae15d1d94c655c9
-  - enabled: 0
+  - enabled: 1
     path: Assets/IRONHEAD Games/Scenes/Solutions/Multiplayer/Clinic Multiplayer.unity
     guid: e40218d10c3f6b34ca2d1b441c7bcb39
   - enabled: 0

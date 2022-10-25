@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 0}
+  playSoundWhenCollided: 1
 --- !u!1 &3887769888364750678
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +235,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3887769888364750673}
     m_Modifications:
+    - target: {fileID: 1511540750544508835, guid: f620d36c5e0c9d049b4645a1577d2db3, type: 3}
+      propertyPath: playSoundWhenCollided
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2088845053467518732, guid: f620d36c5e0c9d049b4645a1577d2db3, type: 3}
+      propertyPath: playSoundWhenCollided
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6292151806366673798, guid: f620d36c5e0c9d049b4645a1577d2db3, type: 3}
       propertyPath: m_RootOrder
       value: 2
