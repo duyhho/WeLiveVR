@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/IRONHEAD Games/Scenes/Solutions/Multiplayer/World_Outdoor Multiplayer.unity
     guid: 1c1633973f089dc4dbe8480641ac7df0
-  - enabled: 1
+  - enabled: 0
     path: Assets/IRONHEAD Games/Scenes/Solutions/Multiplayer/World_School Multiplayer.unity
     guid: af78a57a3718f9249ae15d1d94c655c9
   - enabled: 1
