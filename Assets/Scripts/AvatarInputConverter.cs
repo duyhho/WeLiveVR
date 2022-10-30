@@ -40,4 +40,80 @@ public class AvatarInputConverter : MonoBehaviour
         AvatarHand_Left.position = Vector3.Lerp(AvatarHand_Left.position, XRHand_Left.position, 0.5f);
         AvatarHand_Left.rotation = Quaternion.Lerp(AvatarHand_Left.rotation, XRHand_Left.rotation, 0.5f) * Quaternion.Euler(handRotationOffset);
     }
+    public void AnimateGrabLeft() {
+        Debug.Log("AnimateGrabLeft Called!");
+        if (AvatarHand_Left) {
+            Debug.Log(AvatarHand_Left);
+            if(AvatarHand_Left.childCount > 0) {
+                Transform leftHandModel = AvatarHand_Left.transform.GetChild(0);
+                if (leftHandModel.name.Contains("Hips")) {
+                    if (AvatarHand_Left.transform.GetComponent<XRHandController>())
+                    AvatarHand_Left.transform.GetComponent<XRHandController>().AnimateGrab();
+                }
+                else {
+
+                    Debug.Log(leftHandModel);
+                    leftHandModel.GetComponent<XRHandController>().AnimateGrab();
+                }
+                
+               
+            }  
+            
+        }
+    }
+    public void AnimateGrabRight() {
+        Debug.Log("AnimateGrabRight Called!");
+
+        if (AvatarHand_Right) {
+            Debug.Log(AvatarHand_Right);
+            if(AvatarHand_Right.childCount > 0) {
+                Transform rightHandModel = AvatarHand_Right.transform.GetChild(0);
+                Debug.Log(rightHandModel);
+                rightHandModel.GetComponent<XRHandController>().AnimateGrab();
+            }    
+        }
+    }
+
+    public void AnimateReleaseLeft() {
+        Debug.Log("AnimateGrabLeft Called!");
+        if (AvatarHand_Left) {
+            Debug.Log(AvatarHand_Left);
+            if(AvatarHand_Left.childCount > 0) {
+                Transform leftHandModel = AvatarHand_Left.transform.GetChild(0);
+                if (leftHandModel.name.Contains("Hips")) {
+                    if (AvatarHand_Left.transform.GetComponent<XRHandController>())
+                    AvatarHand_Left.transform.GetComponent<XRHandController>().AnimateRelease();
+                }
+                else {
+                    
+                    Debug.Log(leftHandModel);
+                    leftHandModel.GetComponent<XRHandController>().AnimateRelease();
+                }
+                
+               
+            }  
+            
+        }
+    }
+    public void AnimateReleaseRight() {
+        Debug.Log("AnimateReleaseRight Called!");
+        if (AvatarHand_Right) {
+            Debug.Log(AvatarHand_Right);
+            if(AvatarHand_Right.childCount > 0) {
+                Transform rightHandModel = AvatarHand_Right.transform.GetChild(0);
+                if (rightHandModel.name.Contains("Hips")) {
+                    if (AvatarHand_Right.transform.GetComponent<XRHandController>())
+                    AvatarHand_Right.transform.GetComponent<XRHandController>().AnimateRelease();
+                }
+                else {
+                    
+                    Debug.Log(rightHandModel);
+                    rightHandModel.GetComponent<XRHandController>().AnimateRelease();
+                }
+                
+               
+            }  
+            
+        }
+    }
 }

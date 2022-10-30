@@ -54,7 +54,7 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
             if (SpeakerOut != null && AvatarHeadGameObject != null) {
             OVRLipSyncContextMorphTarget speakerTarget = SpeakerOut.GetComponent<OVRLipSyncContextMorphTarget>();
             speakerTarget.skinnedMeshRenderer = AvatarHeadGameObject.GetComponentInChildren<SkinnedMeshRenderer>();
-        }
+            }
         }
 
         if (PlayerName_Text != null)

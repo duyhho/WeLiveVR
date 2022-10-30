@@ -20,6 +20,8 @@ public class XRHandController : MonoBehaviour
     private float indexValue;
     private float thumbValue;
     private float threeFingersValue;
+    
+    public bool isMine = true;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,13 @@ public class XRHandController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AnimateHand();
+        // if (inputDevice != null)
+        //     AnimateHand();
+        if (isMine) {
+            AnimateHand();
+        }
+        
+        // AnimateGrab();
     }
 
     InputDevice GetInputDevice()
@@ -91,5 +99,38 @@ public class XRHandController : MonoBehaviour
         animator.SetFloat("Thumb_Right", thumbValue);
         }
         
+    }
+
+    public void AnimateGrab() {
+            Debug.Log("XRHandController AnimateGrab() Called");
+
+         if (handType == HandType.Left)
+        {
+           // Debug.Log("indexValue" + indexValue.ToString());
+            animator.SetFloat("Index", 1);
+            animator.SetFloat("ThreeFingers", 1);
+            animator.SetFloat("Thumb", 1);
+        }
+        else if (handType == HandType.Right) {
+        // Debug.Log("indexValue" + indexValue.ToString());
+            animator.SetFloat("Index_Right", 1);
+            animator.SetFloat("ThreeFingers_Right", 1);
+            animator.SetFloat("Thumb_Right", 1);
+        }
+    }
+    public void AnimateRelease() {
+        if (handType == HandType.Left)
+        {
+           // Debug.Log("indexValue" + indexValue.ToString());
+            animator.SetFloat("Index", 0);
+            animator.SetFloat("ThreeFingers", 0);
+            animator.SetFloat("Thumb", 0);
+        }
+        else if (handType == HandType.Right) {
+        // Debug.Log("indexValue" + indexValue.ToString());
+            animator.SetFloat("Index_Right", 0);
+            animator.SetFloat("ThreeFingers_Right", 0);
+            animator.SetFloat("Thumb_Right", 0);
+        }
     }
 }

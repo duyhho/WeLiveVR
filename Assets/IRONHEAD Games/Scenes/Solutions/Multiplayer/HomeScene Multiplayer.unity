@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0050991266, g: 0.007792117, b: 0.025869599, a: 1}
+  m_IndirectSpecularColor: {r: 0.0050991005, g: 0.00779208, b: 0.02586949, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -390,6 +390,14 @@ PrefabInstance:
       propertyPath: m_Colliders.Array.data[0]
       value: 
       objectReference: {fileID: 1105545474}
+    - target: {fileID: 1338401470, guid: 38d714a5cb9850f4886d957413ff5760, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1887316085}
+    - target: {fileID: 1338401470, guid: 38d714a5cb9850f4886d957413ff5760, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckHand
+      objectReference: {fileID: 0}
     - target: {fileID: 1338401471, guid: 38d714a5cb9850f4886d957413ff5760, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -1532,6 +1540,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5355821022756758296, guid: f18d1cafadaf41f4ab4b943a51ff8859, type: 3}
+      propertyPath: isMine
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616710311380886065, guid: f18d1cafadaf41f4ab4b943a51ff8859, type: 3}
+      propertyPath: isMine
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8115286020964341723, guid: f18d1cafadaf41f4ab4b943a51ff8859, type: 3}
       propertyPath: m_Name
       value: Duy Avatar - with Lipsync Local
@@ -2214,10 +2230,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 697097752}
+        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
+        m_MethodName: AnimateGrabLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 697097752}
+        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
+        m_MethodName: AnimateReleaseLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4415,35 +4455,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013022660994, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.2829895
+      value: 0.3388433
       objectReference: {fileID: 0}
     - target: {fileID: 4000013022660994, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.28298
+      value: 0.33885667
       objectReference: {fileID: 0}
     - target: {fileID: 4000013022660994, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.64801675
+      value: -0.62062836
       objectReference: {fileID: 0}
     - target: {fileID: 4000013022660994, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6480074
+      value: 0.62063026
       objectReference: {fileID: 0}
     - target: {fileID: 4000013492819504, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.3872225
+      value: 0.6081063
       objectReference: {fileID: 0}
     - target: {fileID: 4000013492819504, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.3872225
+      value: 0.6081063
       objectReference: {fileID: 0}
     - target: {fileID: 4000013492819504, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.59165764
+      value: -0.3608417
       objectReference: {fileID: 0}
     - target: {fileID: 4000013492819504, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.59165764
+      value: 0.3608417
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
@@ -10181,6 +10221,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 498890, guid: f92ddc120758be04aa175409643521ba, type: 3}
   m_PrefabInstance: {fileID: 1886616134}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1887316085 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1338401470, guid: 38d714a5cb9850f4886d957413ff5760, type: 3}
+  m_PrefabInstance: {fileID: 121156363}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734e4f7d25482af4a8a0e83a3c19ca66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1895779304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11024,10 +11075,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 697097752}
+        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
+        m_MethodName: AnimateGrabRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 697097752}
+        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
+        m_MethodName: AnimateReleaseRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
