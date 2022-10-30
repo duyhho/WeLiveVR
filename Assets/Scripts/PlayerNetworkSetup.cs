@@ -16,6 +16,10 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
     public TextMeshProUGUI PlayerName_Text;
     void Start()
     {
+        AvatarInputConverter avatarInputConverter = LocalXRRigGameObject.transform.GetComponent<AvatarInputConverter>();
+        Transform AvatarHand_Left = avatarInputConverter.AvatarHand_Left;
+        Transform AvatarHand_Right = avatarInputConverter.AvatarHand_Right;
+
         if (photonView.IsMine)
         {
             //Local player
@@ -44,6 +48,28 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
             }
             MainAvatarGameObject.AddComponent<AudioListener>();
 
+            
+            if (AvatarHand_Left) {
+                Debug.Log(AvatarHand_Left);
+                if(AvatarHand_Left.childCount > 0) {
+                    Transform leftHandModel = AvatarHand_Left.transform.GetChild(0);
+                    if (leftHandModel.name.Contains("Hips")) {
+                        if (AvatarHand_Left.transform.GetComponent<XRHandController>())
+                        AvatarHand_Left.transform.GetComponent<XRHandController>().isMine = true;
+                    }
+                    else {
+
+                        Debug.Log(leftHandModel);
+                        Debug.Log("IS MINE TRUE!");
+                        leftHandModel.GetComponent<XRHandController>().isMine = true;
+                    }
+                    
+                
+                }  
+            
+            }
+            
+
         }
         else
         {
@@ -54,6 +80,26 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
             if (SpeakerOut != null && AvatarHeadGameObject != null) {
             OVRLipSyncContextMorphTarget speakerTarget = SpeakerOut.GetComponent<OVRLipSyncContextMorphTarget>();
             speakerTarget.skinnedMeshRenderer = AvatarHeadGameObject.GetComponentInChildren<SkinnedMeshRenderer>();
+            }
+
+            if (AvatarHand_Left) {
+                Debug.Log(AvatarHand_Left);
+                if(AvatarHand_Left.childCount > 0) {
+                    Transform leftHandModel = AvatarHand_Left.transform.GetChild(0);
+                    if (leftHandModel.name.Contains("Hips")) {
+                        if (AvatarHand_Left.transform.GetComponent<XRHandController>())
+                        AvatarHand_Left.transform.GetComponent<XRHandController>().isMine = false;
+                    }
+                    else {
+
+                        Debug.Log(leftHandModel);
+                        Debug.Log("IS MINE FALSE!");
+                        leftHandModel.GetComponent<XRHandController>().isMine = false;
+                    }
+                    
+                
+                }  
+            
             }
         }
 
