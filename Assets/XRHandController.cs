@@ -21,7 +21,7 @@ public class XRHandController : MonoBehaviour
     private float thumbValue;
     private float threeFingersValue;
     
-    public bool isMine = true;
+    public bool isMine = false;
 
     // Start is called before the first frame update
     void Start()

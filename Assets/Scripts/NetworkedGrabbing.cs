@@ -9,9 +9,13 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
     PhotonView m_PhotonView;
     Rigidbody rb;
     bool isBeingHeld = false;
+    CustomInteractable XRCustomInteractable;
     void Awake()
     {
         m_PhotonView = GetComponent<PhotonView>();
+        XRCustomInteractable = GetComponent<CustomInteractable>();
+        XRCustomInteractable.onSelectEnter.AddListener(StartNetworkGrabbingAnimation);
+
     }
 
     // Start is called before the first frame update
@@ -28,6 +32,7 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
             //disable gravity
             rb.isKinematic = true;
             // GetComponent<XRGrabInteractable>().interactionLayers = InteractionLayerMask.GetMask("InHand");
+
         }
         else
         {
@@ -85,10 +90,51 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
     public void StartNetworkGrabbing()
     {
         isBeingHeld = true;
+        // XRBaseInteractor interactor = selectingInteractor;
+        // if (interactor) {
+        //     Debug.Log(interactor);
+        //     if (interactor.name.Contains("LeftHand")) {
+        //                 Debug.Log("Networked Grabbing Left!");
+        //                 currentAttachController = interactor.gameObject.GetComponent<XRBaseController>();
+        //                 trocarController.currentController = currentAttachController;
+        //                 // Debug.Log(currentAttachController);
+                       
+        //         }
+        //         else if (interactor.name.Contains("RightHand")) {
+        //             currentAttachController = interactor.gameObject.GetComponent<XRBaseController>();
+        //             trocarController.currentController = currentAttachController;
+
+        //             // Debug.Log(currentAttachController);
+        //             Debug.Log("Networked Grabbing Right!");
+                   
+        //         }
+        // }
     }
     [PunRPC]
     public void StopNetworkGrabbing()
     {
         isBeingHeld = false;
+    }
+    void StartNetworkGrabbingAnimation(XRBaseInteractor interactor) {
+        Debug.Log("StartNetworkGrabbingAnimation");
+        Debug.Log(interactor);
+        if (interactor) {
+            Debug.Log(interactor);
+            Transform GenericVRPlayer = interactor.gameObject.transform.root;
+            PhotonView playerPhotonView = GenericVRPlayer.GetComponent<PhotonView>();
+            Debug.Log("player name: " + playerPhotonView.name);
+            if (interactor.name.Contains("LeftHand")) {
+                    Debug.Log("Networked Grabbing Left!");
+                    // Debug.Log(currentAttachController);
+                    playerPhotonView.RPC("StartNetworkGrabbingAnimation", RpcTarget.AllBuffered);
+                       
+                }
+                else if (interactor.name.Contains("RightHand")) {
+                
+                    // Debug.Log(currentAttachController);
+                    Debug.Log("Networked Grabbing Right!");
+                   
+                }
+        }
     }
 }

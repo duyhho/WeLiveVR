@@ -1216,34 +1216,10 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3416904285448777784}
-        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
-        m_MethodName: AnimateGrabLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3416904285448777784}
-        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
-        m_MethodName: AnimateReleaseLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -2317,7 +2293,7 @@ MonoBehaviour:
   AvatarBodyGameObject: {fileID: 8186261938098901838}
   SpeakerOut: {fileID: 4440649964665507904}
   AvatarModelPrefabs:
-  - {fileID: 8115286020964341723, guid: 2bc91a641802320409a6d359c7113fcc, type: 3}
+  - {fileID: 8115286020964341723, guid: 6f7828a7ff63f344e878665aba2cb9ea, type: 3}
   - {fileID: 2271839714764946441, guid: 8b158cea96c812249b01aa3eeb964dc1, type: 3}
   - {fileID: 2271839714764946441, guid: baca082f9ef0f1f45a64b1a7f28711b1, type: 3}
   - {fileID: 2271839714764946441, guid: 7f3aa8340a6dd9b449e5f776c6b4ab4c, type: 3}
@@ -2341,6 +2317,8 @@ MonoBehaviour:
   bodyTransform: {fileID: 2172079514020916574}
   leftHandTransform: {fileID: 238963150842621482}
   rightHandTransform: {fileID: 3445323368833804749}
+  LocalXRRigGameObject: {fileID: 6483393418363623513}
+  isGrabbing: 0
 --- !u!114 &7091788325040913093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2660,34 +2638,10 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3416904285448777784}
-        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
-        m_MethodName: AnimateGrabRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3416904285448777784}
-        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
-        m_MethodName: AnimateReleaseRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []

@@ -95,6 +95,25 @@ public class MultiplayerVRSynchronization : MonoBehaviour, IPunObservable
 
     bool m_firstTake = false;
 
+    
+    [Header("Local XR Rig GameObject")]
+    public GameObject LocalXRRigGameObject;
+    [Header("Is Grabbing")]
+    public bool isGrabbing;
+
+    [PunRPC]
+    public void StartNetworkGrabbingAnimation()
+    {
+        isGrabbing = true;
+        LocalXRRigGameObject.transform.GetComponent<AvatarInputConverter>().AnimateGrabLeft();
+    }
+    [PunRPC]
+    public void StopNetworkGrabbingAnimation()
+    {
+        isGrabbing = false;
+        LocalXRRigGameObject.transform.GetComponent<AvatarInputConverter>().AnimateReleaseLeft();
+
+    }
     public void Awake()
     {
         m_PhotonView = GetComponent<PhotonView>();

@@ -49,25 +49,25 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
             MainAvatarGameObject.AddComponent<AudioListener>();
 
             
-            if (AvatarHand_Left) {
-                Debug.Log(AvatarHand_Left);
-                if(AvatarHand_Left.childCount > 0) {
-                    Transform leftHandModel = AvatarHand_Left.transform.GetChild(0);
-                    if (leftHandModel.name.Contains("Hips")) {
-                        if (AvatarHand_Left.transform.GetComponent<XRHandController>())
-                        AvatarHand_Left.transform.GetComponent<XRHandController>().isMine = true;
-                    }
-                    else {
+            // if (AvatarHand_Left) {
+            //     Debug.Log(AvatarHand_Left);
+            //     if(AvatarHand_Left.childCount > 0) {
+            //         Transform leftHandModel = AvatarHand_Left.transform.GetChild(0);
+            //         if (leftHandModel.name.Contains("Hips")) {
+            //             if (AvatarHand_Left.transform.GetComponent<XRHandController>())
+            //             AvatarHand_Left.transform.GetComponent<XRHandController>().isMine = true;
+            //         }
+            //         else {
 
-                        Debug.Log(leftHandModel);
-                        Debug.Log("IS MINE TRUE!");
-                        leftHandModel.GetComponent<XRHandController>().isMine = true;
-                    }
+            //             Debug.Log(leftHandModel);
+            //             Debug.Log("IS MINE TRUE!");
+            //             leftHandModel.GetComponent<XRHandController>().isMine = true;
+            //         }
                     
                 
-                }  
+            //     }  
             
-            }
+            // }
             
 
         }
@@ -82,25 +82,25 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
             speakerTarget.skinnedMeshRenderer = AvatarHeadGameObject.GetComponentInChildren<SkinnedMeshRenderer>();
             }
 
-            if (AvatarHand_Left) {
-                Debug.Log(AvatarHand_Left);
-                if(AvatarHand_Left.childCount > 0) {
-                    Transform leftHandModel = AvatarHand_Left.transform.GetChild(0);
-                    if (leftHandModel.name.Contains("Hips")) {
-                        if (AvatarHand_Left.transform.GetComponent<XRHandController>())
-                        AvatarHand_Left.transform.GetComponent<XRHandController>().isMine = false;
-                    }
-                    else {
+            // if (AvatarHand_Left) {
+            //     Debug.Log(AvatarHand_Left);
+            //     if(AvatarHand_Left.childCount > 0) {
+            //         Transform leftHandModel = AvatarHand_Left.transform.GetChild(0);
+            //         if (leftHandModel.name.Contains("Hips")) {
+            //             if (AvatarHand_Left.transform.GetComponent<XRHandController>())
+            //             AvatarHand_Left.transform.GetComponent<XRHandController>().isMine = false;
+            //         }
+            //         else {
 
-                        Debug.Log(leftHandModel);
-                        Debug.Log("IS MINE FALSE!");
-                        leftHandModel.GetComponent<XRHandController>().isMine = false;
-                    }
+            //             Debug.Log(leftHandModel);
+            //             Debug.Log("IS MINE FALSE!");
+            //             leftHandModel.GetComponent<XRHandController>().isMine = false;
+            //         }
                     
                 
-                }  
+            //     }  
             
-            }
+            // }
         }
 
         if (PlayerName_Text != null)
