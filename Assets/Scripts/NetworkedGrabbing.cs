@@ -14,7 +14,7 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
     {
         m_PhotonView = GetComponent<PhotonView>();
         XRCustomInteractable = GetComponent<CustomInteractable>();
-        XRCustomInteractable.onSelectEnter.AddListener(StartNetworkGrabbingAnimation);
+        XRCustomInteractable.onSelectEntered.AddListener(StartNetworkGrabbingAnimation);
 
     }
 

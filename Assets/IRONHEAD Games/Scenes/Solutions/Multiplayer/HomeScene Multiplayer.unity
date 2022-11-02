@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0050991005, g: 0.00779208, b: 0.02586949, a: 1}
+  m_IndirectSpecularColor: {r: 0.0050991266, g: 0.007792117, b: 0.025869599, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1138,19 +1138,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 49.45
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -34.8552
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
@@ -1363,6 +1363,10 @@ PrefabInstance:
     - target: {fileID: 1000012050139800, guid: 5c5976de7a162b541b74327d28560ae6, type: 3}
       propertyPath: m_Name
       value: Portal#6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012050139800, guid: 5c5976de7a162b541b74327d28560ae6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531355052, guid: 5c5976de7a162b541b74327d28560ae6, type: 3}
       propertyPath: m_RootOrder
@@ -2230,34 +2234,10 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 697097752}
-        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
-        m_MethodName: AnimateGrabLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 697097752}
-        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
-        m_MethodName: AnimateReleaseLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4397,6 +4377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal#2
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012684232078, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010155050976, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4455,35 +4439,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013022660994, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.28070468
+      value: -0.39222386
       objectReference: {fileID: 0}
     - target: {fileID: 4000013022660994, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.28069502
+      value: -0.39221603
       objectReference: {fileID: 0}
     - target: {fileID: 4000013022660994, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6490098
+      value: -0.58836216
       objectReference: {fileID: 0}
     - target: {fileID: 4000013022660994, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6490004
+      value: 0.5883512
       objectReference: {fileID: 0}
     - target: {fileID: 4000013492819504, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.3882641
+      value: 0.3336488
       objectReference: {fileID: 0}
     - target: {fileID: 4000013492819504, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.3882641
+      value: 0.3336488
       objectReference: {fileID: 0}
     - target: {fileID: 4000013492819504, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5909746
+      value: -0.62344086
       objectReference: {fileID: 0}
     - target: {fileID: 4000013492819504, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5909746
+      value: 0.62344086
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32944dd6333971f409a5c478df6be83e, type: 3}
@@ -4788,7 +4772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 154818, guid: e75b8d02b8d5e2d47944e6dd1349add0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 417342, guid: e75b8d02b8d5e2d47944e6dd1349add0, type: 3}
       propertyPath: m_RootOrder
@@ -5005,6 +4989,10 @@ PrefabInstance:
     - target: {fileID: 1000013587899672, guid: 1e954a63b44967b41bd995ec6d80eeee, type: 3}
       propertyPath: m_Name
       value: Portal#11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013587899672, guid: 1e954a63b44967b41bd995ec6d80eeee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011129969154, guid: 1e954a63b44967b41bd995ec6d80eeee, type: 3}
       propertyPath: m_RootOrder
@@ -5953,6 +5941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal#9
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014217584422, guid: ddada74c6b2c2ac47be52820d2afa2cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011695802438, guid: ddada74c6b2c2ac47be52820d2afa2cd, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -6026,6 +6018,10 @@ PrefabInstance:
     - target: {fileID: 100734, guid: a90132a91eba71646b84561f8914b29f, type: 3}
       propertyPath: m_Name
       value: Portal#5_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100734, guid: a90132a91eba71646b84561f8914b29f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 104270, guid: a90132a91eba71646b84561f8914b29f, type: 3}
       propertyPath: m_IsActive
@@ -8148,6 +8144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal#10
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012387892066, guid: 562793000a2aa1742b74f0f5c656103b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012193690298, guid: 562793000a2aa1742b74f0f5c656103b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -8468,19 +8468,19 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 8290d40630b53b24995786124d4aac1f, type: 3}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 49.45
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -34.8552
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272509, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_Sprite
@@ -10365,19 +10365,19 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 546b9fced6fff9443880acccc70a1348, type: 3}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 49.45
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -34.8552
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272509, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_Sprite
@@ -11075,34 +11075,10 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 697097752}
-        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
-        m_MethodName: AnimateGrabRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 697097752}
-        m_TargetAssemblyTypeName: AvatarInputConverter, Assembly-CSharp
-        m_MethodName: AnimateReleaseRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -11447,19 +11423,19 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 685c4df224b6bee49a535d3b255102af, type: 3}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 49.45
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272508, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -34.8552
       objectReference: {fileID: 0}
     - target: {fileID: 3353666618244272509, guid: 5658209d8d8d4064bab957f48203108e, type: 3}
       propertyPath: m_Sprite
