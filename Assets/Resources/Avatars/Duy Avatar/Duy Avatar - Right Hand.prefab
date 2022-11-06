@@ -223,6 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 0
   thumbMoveSpeed: 0.1
+  isMine: 0
 --- !u!1 &1617041945287890352
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +605,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6024406002250460866}
   - component: {fileID: 6743830515294625074}
-  - component: {fileID: 190149216944625855}
   - component: {fileID: 8054058261871426677}
   m_Layer: 0
   m_Name: Duy Avatar - Right Hand
@@ -648,23 +648,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &190149216944625855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3524930895897889414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ddc7230cc1885842829ffc16288dc5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainAvatarTransform: {fileID: 6024406002250460866}
-  HeadTransform: {fileID: 3326962705439310609}
-  BodyTransform: {fileID: 0}
-  HandLeftTransform: {fileID: 7465320272679900850}
-  HandRightTransform: {fileID: 2579151273380554666}
 --- !u!114 &8054058261871426677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,6 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 1
   thumbMoveSpeed: 0.1
+  isMine: 0
 --- !u!1 &3697634905810249552
 GameObject:
   m_ObjectHideFlags: 0

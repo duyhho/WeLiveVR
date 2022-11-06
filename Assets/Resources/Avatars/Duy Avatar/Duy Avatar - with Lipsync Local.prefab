@@ -367,6 +367,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3210361694617286401}
     m_Modifications:
+    - target: {fileID: 190149216944625855, guid: 44c4c2cd4c501084bae57cc27b146635, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3524930895897889414, guid: 44c4c2cd4c501084bae57cc27b146635, type: 3}
       propertyPath: m_Name
       value: Duy Avatar - Right Hand
@@ -417,6 +421,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6024406002250460866, guid: 44c4c2cd4c501084bae57cc27b146635, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998496028166552233, guid: 44c4c2cd4c501084bae57cc27b146635, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -481,6 +489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Duy Avatar - Head Body
       objectReference: {fileID: 0}
+    - target: {fileID: 7427811110175039740, guid: d5a83972d08dc48479ba0b9f10f9f864, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5a83972d08dc48479ba0b9f10f9f864, type: 3}
 --- !u!4 &7075796616360978075 stripped
@@ -500,6 +512,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3210361694617286401}
     m_Modifications:
+    - target: {fileID: 8418750808557551208, guid: 1cde68d110cd939498a440747c92cd5b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8418750808557551210, guid: 1cde68d110cd939498a440747c92cd5b, type: 3}
       propertyPath: m_RootOrder
       value: 1
