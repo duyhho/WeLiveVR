@@ -4974,23 +4974,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4969953802363427667, guid: 2601b9a3eb14a124b8b3ea704db7e3fc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6231650619985823511, guid: 2601b9a3eb14a124b8b3ea704db7e3fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6231650619985823511, guid: 2601b9a3eb14a124b8b3ea704db7e3fc, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6231650619985823511, guid: 2601b9a3eb14a124b8b3ea704db7e3fc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6231650619985823511, guid: 2601b9a3eb14a124b8b3ea704db7e3fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6354375702085481080, guid: 2601b9a3eb14a124b8b3ea704db7e3fc, type: 3}
       propertyPath: sceneViewId

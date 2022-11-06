@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/IRONHEAD Games/Scenes/Solutions/Multiplayer/Classroom Multiplayer.unity
     guid: 2cae460630c705644b3dd76c3acc56f8
+  - enabled: 1
+    path: Assets/Scenes/FruitNinja.unity
+    guid: a338ae2c37c75fa4393e3ef8a114bf36
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 99659a41ea00cd24898a7e2a97ef6c09, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: cd560fac52ec22f4594fdbafb07b0128, type: 2}
