@@ -43,6 +43,8 @@ public class UIManager : MonoBehaviour
     //public GameObject StartSurvivorModeButton;
     public GameObject MainMenuButton;
 
+    [Header("Background Music Audio")]
+    public List<AudioSource> audioSources;
     private void Start()
     {
         gameController = GameController.instance;
@@ -80,6 +82,9 @@ public class UIManager : MonoBehaviour
         canCount = true;
         timeText.text = " 1 : 00";
         scoreText.text = "0";
+        AudioSource currentAudio = audioSources[Random.Range(0, audioSources.Count)];
+        if (currentAudio != null)
+            currentAudio.Play();
         pooler.StartGameInPool(0);
     }
 

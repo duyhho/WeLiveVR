@@ -17,6 +17,7 @@ public class Fruit : MonoBehaviour
 {
     //particle type
     public particleType particleTyp;
+    public GameMode gameMode;
     Rigidbody fruitRigidbody;
     GameController gameController;
     Pooler pooler;
@@ -28,6 +29,12 @@ public class Fruit : MonoBehaviour
         gameController = GameController.instance;
         pooler = Pooler.instance;
         rb = GetComponent<Rigidbody>();
+        if (gameMode == GameMode.FruitNinja) {
+
+        }
+        else if (gameMode == GameMode.CubeNinja) {
+           rb.constraints = RigidbodyConstraints.FreezePositionY;
+        }
     }
     // void Update() {
     //     transform.Translate(0.1f, 0f, 0f);
@@ -61,6 +68,7 @@ public class Fruit : MonoBehaviour
     private void Bounce(Vector3 collisionNormal, float velocity)
     {
         float speed = rb.velocity.magnitude;
+        rb.constraints = RigidbodyConstraints.None;
         rb.velocity = collisionNormal * Mathf.Max(speed, velocity / 4);
     }
 
@@ -73,6 +81,12 @@ public class Fruit : MonoBehaviour
         fruitRigidbody.angularVelocity = Vector3.zero;
         transform.rotation = Quaternion.identity;
         fruitRigidbody.interpolation = RigidbodyInterpolation.None;
+        if (gameMode == GameMode.FruitNinja) {
+
+        }
+        else if (gameMode == GameMode.CubeNinja) {
+           fruitRigidbody.constraints = RigidbodyConstraints.FreezePositionY;
+        }
     }
 
 

@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+//particle type
+public enum GameMode
+{
+   FruitNinja,
+   CubeNinja,
+
+}
+
 public class Pooler : MonoBehaviour
 {
     public static Pooler instance;
@@ -19,6 +27,8 @@ public class Pooler : MonoBehaviour
     }
     UIManager uIManager;
     SoundManager soundManager;
+    [Header("Game Mode")]
+    public GameMode gameMode;
     [Header("SpawnPoints and Fruits")]
     public List<GameObject> FruitPrefabs;
     public List<GameObject> UsedFruit = new List<GameObject>();
@@ -165,10 +175,15 @@ public class Pooler : MonoBehaviour
     {
         obj.SetActive(true);
         Rigidbody rig = obj.GetComponent<Rigidbody>();
-        // rig.AddForce(obj.transform.up * Random.Range(270, 330) * (1f / Time.timeScale));
-        rig.velocity = new Vector3(0f, 0, -5f);
-        // rig.AddForce(obj.transform.forward * Random.Range(-20, -40) * (1f / Time.timeScale));
-        // rig.AddForce(obj.transform.right * Random.Range(-30, 30) * (1f / Time.timeScale));
+        if (gameMode == GameMode.FruitNinja) {
+            rig.AddForce(obj.transform.up * Random.Range(270, 330) * (1f / Time.timeScale));
+            rig.AddForce(obj.transform.forward * Random.Range(-20, -40) * (1f / Time.timeScale));
+            rig.AddForce(obj.transform.right * Random.Range(-30, 30) * (1f / Time.timeScale));
+        }
+        else if (gameMode == GameMode.CubeNinja) {
+            rig.velocity = new Vector3(0f, 0, -5f);
+        }
+
     }
 
     //-----------------------------------------------------//
