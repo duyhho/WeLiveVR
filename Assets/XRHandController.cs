@@ -89,6 +89,8 @@ public class XRHandController : MonoBehaviour
         {
            // Debug.Log("indexValue" + indexValue.ToString());
         animator.SetFloat("Index", indexValue);
+        // animator.SetFloat("Index", 0.5f);
+
         animator.SetFloat("ThreeFingers", threeFingersValue);
         animator.SetFloat("Thumb", thumbValue);
         }

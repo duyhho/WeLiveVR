@@ -29,6 +29,9 @@ public class Fruit : MonoBehaviour
         pooler = Pooler.instance;
         rb = GetComponent<Rigidbody>();
     }
+    // void Update() {
+    //     transform.Translate(0.1f, 0f, 0f);
+    // }
 
     private void OnTriggerEnter(Collider other)
     {
