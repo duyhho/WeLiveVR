@@ -9,7 +9,9 @@ public enum particleType
     Ice,        // for frozen fruits
     Red,        // red regular fruits
     Orange,     // Orange regular fruits
-    Yellow      // Yellow regular fruits
+    Yellow,      // Yellow regular fruits
+    Green,
+    Blue
 
 }
 
@@ -33,7 +35,13 @@ public class Fruit : MonoBehaviour
 
         }
         else if (gameMode == GameMode.CubeNinja) {
-           rb.constraints = RigidbodyConstraints.FreezePositionY;
+            float randomScale = Random.Range(0.3f, 0.5f);
+            transform.localScale = new Vector3(randomScale, randomScale, randomScale);
+            if (transform.gameObject.name.Contains("Balk")) {
+                randomScale = Random.Range(0.5f, 0.7f);
+                transform.localScale = new Vector3(randomScale, randomScale, randomScale);
+            }
+            rb.constraints = RigidbodyConstraints.FreezePositionY;
         }
     }
     // void Update() {
@@ -84,7 +92,7 @@ public class Fruit : MonoBehaviour
         if (gameMode == GameMode.FruitNinja) {
 
         }
-        else if (gameMode == GameMode.CubeNinja) {
+        else if (gameMode == GameMode.CubeNinja || gameMode == GameMode.AlienDefense) {
            fruitRigidbody.constraints = RigidbodyConstraints.FreezePositionY;
         }
     }

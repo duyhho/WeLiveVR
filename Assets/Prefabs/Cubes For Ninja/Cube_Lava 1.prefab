@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleTyp: 3
+  gameMode: 1
 --- !u!54 &7378005977054949988
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public enum GameMode
 {
    FruitNinja,
    CubeNinja,
+   AlienDefense
 
 }
 
@@ -180,7 +181,7 @@ public class Pooler : MonoBehaviour
             rig.AddForce(obj.transform.forward * Random.Range(-20, -40) * (1f / Time.timeScale));
             rig.AddForce(obj.transform.right * Random.Range(-30, 30) * (1f / Time.timeScale));
         }
-        else if (gameMode == GameMode.CubeNinja) {
+        else if (gameMode == GameMode.CubeNinja || gameMode == GameMode.AlienDefense) {
             rig.velocity = new Vector3(0f, 0, -5f);
         }
 
