@@ -52,18 +52,26 @@ public class Fruit : MonoBehaviour
     {
         if (other.transform.CompareTag("Player"))
         {
-            Weapon weapon = other.transform.GetComponentInParent<Weapon>();
-            if (weapon.canSlice)
-            {
-                if (weapon.SwordVelocity > 3f || particleTyp == particleType.Explosion)
+            if (gameMode != GameMode.AlienDefense) {
+                Weapon weapon = other.transform.GetComponentInParent<Weapon>();
+                if (weapon.canSlice)
                 {
-                    gameController.Slice(gameObject, weapon);
+                    if (weapon.SwordVelocity > 3f || particleTyp == particleType.Explosion)
+                    {
+                        gameController.Slice(gameObject, weapon);
+                    }
+                }
+                else
+                {
+                    fruitRigidbody.interpolation = RigidbodyInterpolation.Extrapolate;
+                    Bounce(weapon.direct, weapon.SwordVelocity);
                 }
             }
-            else
-            {
-                fruitRigidbody.interpolation = RigidbodyInterpolation.Extrapolate;
-                Bounce(weapon.direct, weapon.SwordVelocity);
+            else {
+                Debug.Log("Touch Hand!");
+                Weapon weapon = other.transform.GetComponentInParent<Weapon>();
+                        gameController.Scatter(gameObject, weapon);
+
             }
         }
 

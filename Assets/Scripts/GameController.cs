@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
     }
 
     //Reference for other singletons
+    public GameMode gameMode;
+
     Pooler pooler;
     UIManager uIManager;
 
@@ -105,6 +107,44 @@ public class GameController : MonoBehaviour
             Debug.Log("null");
         }
     }
+
+        //Check you slice a fruit or not , and slice it!
+    public void Scatter(GameObject _Fruit, Weapon weapon)
+    {
+
+        if (_Fruit.CompareTag("fruit"))
+        {
+            _Fruit.SetActive(false);
+            Fruit fruit = _Fruit.GetComponent<Fruit>();
+            pooler.ReycleFruit(fruit);
+            if (fruit.particleTyp == particleType.Explosion)
+            {
+                soundManager.BombSound();
+                weapon.Vibrate(0.5f);
+            }
+            else if (fruit.particleTyp == particleType.Ice)
+            {
+                soundManager.FrozenSound();
+                uIManager.IncreaseScore(4);
+                weapon.Vibrate(0.2f);
+            }
+            else
+            {
+                soundManager.SplashFruit();
+                uIManager.IncreaseScore(1);
+                weapon.Vibrate(0.1f);
+            }
+        }
+        else if (_Fruit.CompareTag("button"))
+        {
+            weapon.Vibrate(0.1f);
+            uIManager.BeforeSelectButton();
+            soundManager.SplashFruit();
+            StartCoroutine(Countdown(_Fruit));
+        }
+        pooler.GetParticle(_Fruit.GetComponent<Fruit>().particleTyp, _Fruit.transform.position, _Fruit.transform.rotation);
+    }
+
 
     //the function that performs the actual cutting
     public SlicedHull Sliceed(GameObject objectToSlice, GameObject plane, Material material)

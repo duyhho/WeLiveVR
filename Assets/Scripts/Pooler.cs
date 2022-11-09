@@ -125,33 +125,45 @@ public class Pooler : MonoBehaviour
                 GameObject particleGameObject = Instantiate(particle, Vector3.zero, Quaternion.identity, transform);
                 ParticleQueue.Enqueue(particleGameObject.GetComponent<ParticleSystem>());
             }
+            Debug.Log(particle.name);
             SplashParticleDict.Add(particle.name, ParticleQueue);
         }
     }
     //spawn regular fruit
     void SpawnSpecialFruits()
     {
-
+        Debug.Log("Spawning Special Fruit" + SpecialFruits.Keys.Count);
         int SpecialFruitsIndex = Random.Range(0, SpecialFruits.Keys.Count);
 
         int SpecialFruitCount = Random.Range(0, 3);
+        if (SpecialFruits.Keys.Count > 0) {
         for (int i = 0; i < SpecialFruitCount; i++)
         {
             if (SpecialFruits.ElementAt(SpecialFruitsIndex).Key == "Ice" && Random.Range(0, 10) != 0)
             {
                 return;
             }
+            Debug.Log(SpecialFruits.ElementAt(SpecialFruitsIndex));
 
             List<GameObject> SpecialFruitList = SpecialFruits.ElementAt(Random.Range(0, SpecialFruits.Keys.Count)).Value;
-            GameObject randomSpecialFruit = SpecialFruitList[Random.Range(0, SpecialFruitList.Count)];
+            if (SpecialFruitList.Count > 0) {
+                GameObject randomSpecialFruit = SpecialFruitList[Random.Range(0, SpecialFruitList.Count)];
 
-            Vector3 randomPos = SpawnPointList[Random.Range(0, SpawnPointList.Count)];
+                Vector3 randomPos = SpawnPointList[Random.Range(0, SpawnPointList.Count)];
 
-            randomSpecialFruit.transform.localPosition = randomPos;
-            AddSpecialForce(randomSpecialFruit);
-            SpecialFruitList.Remove(randomSpecialFruit);
-            UsedSpecialFrutisList.Add(randomSpecialFruit);
+                randomSpecialFruit.transform.localPosition = randomPos;
+                AddSpecialForce(randomSpecialFruit);
+                SpecialFruitList.Remove(randomSpecialFruit);
+                UsedSpecialFrutisList.Add(randomSpecialFruit);
+
+            }
+            else {
+                Debug.Log("EMPTY LIST!");
+            }
+
         }
+        }
+
     }
 
     //spawn regular fruit
@@ -193,6 +205,7 @@ public class Pooler : MonoBehaviour
     public void GetParticle(particleType _particleType, Vector3 pos, Quaternion rot)
     {
         string particlType = _particleType.ToString();
+        Debug.Log("GETTING" + particlType);
         ParticleSystem particle = SplashParticleDict[particlType].Dequeue();
         //ParticleSystem SlashParticle = SlashParticles.Dequeue();
 

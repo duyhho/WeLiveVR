@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
         }
     }
     //for test
+    public GameMode gameMode;
     public SceneController sceneController;
     GameController gameController;
     Pooler pooler;
@@ -51,7 +52,10 @@ public class UIManager : MonoBehaviour
         pooler = Pooler.instance;
         GameplayPanel.alpha = 0;
         FinishPanel.alpha = 0;
-      //  StartArcadeMode();
+        if (gameMode == GameMode.AlienDefense) {
+       StartArcadeMode();
+
+        }
     }
 
     private void Update()

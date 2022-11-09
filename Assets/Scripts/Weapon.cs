@@ -20,7 +20,8 @@ public class Weapon : MonoBehaviour
     }
     public void Vibrate(float time)
     {
-        xRController.SendHapticImpulse(1, time);
+        if (xRController != null)
+            xRController.SendHapticImpulse(1, time);
     }
     // manually calculate  velocity
     public void Update()
