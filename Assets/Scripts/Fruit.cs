@@ -43,6 +43,18 @@ public class Fruit : MonoBehaviour
             }
             rb.constraints = RigidbodyConstraints.FreezePositionY;
         }
+        else if (gameMode == GameMode.AlienDefense) {
+            if (transform.localScale.x >= 10f) {
+                Debug.Log("Bigger than 10f");
+                float randomScale = Random.Range(40f, 60f);
+                transform.localScale = new Vector3(randomScale, randomScale, randomScale);
+            }
+            else {
+                float randomScale = Random.Range(0.4f, 0.7f);
+                transform.localScale = new Vector3(randomScale, randomScale, randomScale);
+            }
+            rb.constraints = RigidbodyConstraints.FreezePositionY;
+        }
     }
     // void Update() {
     //     transform.Translate(0.1f, 0f, 0f);

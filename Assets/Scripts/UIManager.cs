@@ -82,7 +82,7 @@ public class UIManager : MonoBehaviour
         GameplayPanel.alpha = 1;
         FinishPanel.alpha = 0;
         score = 0;
-        timer = 60f;
+        timer = 30f;
         canCount = true;
         timeText.text = " 1 : 00";
         scoreText.text = "0";
