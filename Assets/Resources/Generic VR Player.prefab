@@ -2294,10 +2294,10 @@ MonoBehaviour:
   SpeakerOut: {fileID: 4440649964665507904}
   AvatarModelPrefabs:
   - {fileID: 8115286020964341723, guid: 6f7828a7ff63f344e878665aba2cb9ea, type: 3}
-  - {fileID: 2271839714764946441, guid: 8b158cea96c812249b01aa3eeb964dc1, type: 3}
-  - {fileID: 2271839714764946441, guid: baca082f9ef0f1f45a64b1a7f28711b1, type: 3}
-  - {fileID: 2271839714764946441, guid: 7f3aa8340a6dd9b449e5f776c6b4ab4c, type: 3}
-  - {fileID: 1947631675684272, guid: a3e9515ec9ef614499b8b2fe34a21b78, type: 3}
+  - {fileID: 8115286020964341723, guid: 9aa8234a435458b42a7294115bce6f07, type: 3}
+  - {fileID: 8115286020964341723, guid: dd52cda32739ca443847ca9a1bf58ade, type: 3}
+  - {fileID: 8115286020964341723, guid: 3d940c0127b7fe947a19e1a2bc21b3c0, type: 3}
+  - {fileID: 8115286020964341723, guid: 545923d7fc3268b469c0c2b5db67f24e, type: 3}
   PlayerName_Text: {fileID: 1166501588519608124}
 --- !u!114 &6909822458098479174
 MonoBehaviour:
