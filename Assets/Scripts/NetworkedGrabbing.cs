@@ -14,7 +14,12 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
     {
         m_PhotonView = GetComponent<PhotonView>();
         XRCustomInteractable = GetComponent<CustomInteractable>();
+        if (XRCustomInteractable != null)   {
         XRCustomInteractable.onSelectEntered.AddListener(StartNetworkGrabbingAnimation);
+
+        }
+        // XRCustomInteractable.OnSelectExited.AddListener(StopNetworkGrabbingAnimation);
+
 
     }
 
@@ -121,18 +126,34 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
         if (interactor) {
             Debug.Log(interactor);
             Transform GenericVRPlayer = interactor.gameObject.transform.root;
+
             PhotonView playerPhotonView = GenericVRPlayer.GetComponent<PhotonView>();
             Debug.Log("player name: " + playerPhotonView.name);
             if (interactor.name.Contains("LeftHand")) {
                     Debug.Log("Networked Grabbing Left!");
                     // Debug.Log(currentAttachController);
-                    playerPhotonView.RPC("StartNetworkGrabbingAnimation", RpcTarget.AllBuffered);
+                    if (playerPhotonView.IsMine) {
+                        Transform LeftHandTransform = GenericVRPlayer.GetComponent<MultiplayerVRSynchronization>().leftHandTransform;
+
+                    }
+                    else {
+                        Transform LeftHandTransform = GenericVRPlayer.GetComponent<MultiplayerVRSynchronization>().leftHandTransform;
+                        Debug.Log("LeftHand Transform: ");
+                        Debug.Log(LeftHandTransform);
+                        Transform XRHandController = LeftHandTransform.GetChild(0);
+                        if (XRHandController != null) {
+                           XRHandController.GetComponent<XRHandController>().AnimateGrab();
+                        }
+                    }
+                    // playerPhotonView.RPC("StartNetworkGrabbingAnimation", RpcTarget.AllBuffered, "left");
                        
                 }
                 else if (interactor.name.Contains("RightHand")) {
                 
                     // Debug.Log(currentAttachController);
                     Debug.Log("Networked Grabbing Right!");
+                    // playerPhotonView.RPC("StartNetworkGrabbingAnimation", RpcTarget.AllBuffered, "right");
+
                    
                 }
         }

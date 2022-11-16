@@ -98,7 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 0
   thumbMoveSpeed: 0.1
-  isMine: 0
+  isMine: 1
+  isReadyPlayerMe: 1
 --- !u!1 &8418750808604943419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1064,7 @@ MonoBehaviour:
   handType: 0
   thumbMoveSpeed: 0.1
   isMine: 0
+  isReadyPlayerMe: 1
 --- !u!1 &8418750810057599214
 GameObject:
   m_ObjectHideFlags: 0

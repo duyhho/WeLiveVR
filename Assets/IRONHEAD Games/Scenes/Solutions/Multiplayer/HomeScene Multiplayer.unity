@@ -415,6 +415,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1953788834, guid: 38d714a5cb9850f4886d957413ff5760, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.015
+      objectReference: {fileID: 0}
     - target: {fileID: 796612264938044268, guid: 38d714a5cb9850f4886d957413ff5760, type: 3}
       propertyPath: m_Name
       value: trocar-default
@@ -3905,7 +3909,7 @@ MonoBehaviour:
   XRHead: {fileID: 1928345885}
   XRHand_Left: {fileID: 634838029}
   XRHand_Right: {fileID: 2105023500}
-  headPositionOffset: {x: 0, y: -0.5, z: 0}
+  headPositionOffset: {x: 0, y: -0.8, z: 0}
   handRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &697097753
 MonoBehaviour:

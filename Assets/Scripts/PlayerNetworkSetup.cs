@@ -77,10 +77,7 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
             LocalXRRigGameObject.SetActive(false);
             SetLayerRecursively(AvatarHeadGameObject, 0);
             SetLayerRecursively(AvatarBodyGameObject, 0);
-            if (SpeakerOut != null && AvatarHeadGameObject != null) {
-            OVRLipSyncContextMorphTarget speakerTarget = SpeakerOut.GetComponent<OVRLipSyncContextMorphTarget>();
-            speakerTarget.skinnedMeshRenderer = AvatarHeadGameObject.GetComponentInChildren<SkinnedMeshRenderer>();
-            }
+            
 
             // if (AvatarHand_Left) {
             //     Debug.Log(AvatarHand_Left);
@@ -133,6 +130,15 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
         AvatarHolder avatarHolder = selectedAvatarGameobject.GetComponent<AvatarHolder>();
         SetUpAvatarGameobject(avatarHolder.HeadTransform, avatarInputConverter.AvatarHead);
         SetUpAvatarGameobject(avatarHolder.BodyTransform, avatarInputConverter.AvatarBody);
+        // if (SpeakerOut != null && avatarInputConverter.AvatarHead != null) {
+        //         OVRLipSyncContextMorphTarget speakerTarget = SpeakerOut.GetComponent<OVRLipSyncContextMorphTarget>();
+        //         speakerTarget.skinnedMeshRenderer = avatarInputConverter.AvatarHead.GetComponentInChildren<SkinnedMeshRenderer>();
+        //     }
+            // else 
+            if (SpeakerOut != null && avatarInputConverter.AvatarBody != null) {
+                OVRLipSyncContextMorphTarget speakerTarget = SpeakerOut.GetComponent<OVRLipSyncContextMorphTarget>();
+                speakerTarget.skinnedMeshRenderer = avatarInputConverter.AvatarBody.GetComponentInChildren<SkinnedMeshRenderer>();
+            }
         SetUpAvatarGameobject(avatarHolder.HandLeftTransform, avatarInputConverter.AvatarHand_Left);
         SetUpAvatarGameobject(avatarHolder.HandRightTransform, avatarInputConverter.AvatarHand_Right);
     }

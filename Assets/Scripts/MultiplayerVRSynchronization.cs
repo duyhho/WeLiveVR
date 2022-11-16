@@ -8,7 +8,9 @@ public class MultiplayerVRSynchronization : MonoBehaviour, IPunObservable
 {
 
     private PhotonView m_PhotonView;
-
+    //Main Avatar Transform Synch
+    [Header("Ready Player Me Avatars Only")]
+    public bool readyPlayerMeAvatarsOnly = true;
 
     //Main VRPlayer Transform Synch
     [Header("Main VRPlayer Transform Synch")]
@@ -101,19 +103,23 @@ public class MultiplayerVRSynchronization : MonoBehaviour, IPunObservable
     [Header("Is Grabbing")]
     public bool isGrabbing;
 
-    [PunRPC]
-    public void StartNetworkGrabbingAnimation()
-    {
-        isGrabbing = true;
-        LocalXRRigGameObject.transform.GetComponent<AvatarInputConverter>().AnimateGrabLeft();
-    }
-    [PunRPC]
-    public void StopNetworkGrabbingAnimation()
-    {
-        isGrabbing = false;
-        LocalXRRigGameObject.transform.GetComponent<AvatarInputConverter>().AnimateReleaseLeft();
+    // [PunRPC]
+    // public void StartNetworkGrabbingAnimation(string controllerSide)
+    // {
+        
+    //     Debug.Log("networked isGrabbing = True " + controllerSide);
+    //     isGrabbing = true;
+    //     // LocalXRRigGameObject.transform.GetComponent<AvatarInputConverter>().AnimateGrabLeft();
+    // }
+    // [PunRPC]
+    // public void StopNetworkGrabbingAnimation(string controllerSide)
+    // {
+    //     isGrabbing = false;
+    //     Debug.Log("networked isGrabbing = False " + controllerSide);
 
-    }
+    //     // LocalXRRigGameObject.transform.GetComponent<AvatarInputConverter>().AnimateReleaseLeft();
+
+    // }
     public void Awake()
     {
         m_PhotonView = GetComponent<PhotonView>();
@@ -153,38 +159,57 @@ public class MultiplayerVRSynchronization : MonoBehaviour, IPunObservable
         m_firstTake = true;
     }
     public void FixedUpdate() {
-        if (headTransform) {
-            Debug.Log(headTransform);
-            if(headTransform.childCount > 0) {
-                Transform headModel = headTransform.GetChild(0);
-                Transform readyMeHead = headModel.Find("Hips/Spine/Neck/Head");
-                if (readyMeHead != null) {
-                    Debug.Log("readyMeHead FOUND!");
-                    Transform actualHead = readyMeHead;
-                    headTransform = actualHead;
+        if (readyPlayerMeAvatarsOnly) {
+                // if (headTransform) {
+                //     Debug.Log(headTransform);
+                //     if(headTransform.childCount > 0) {
+                //         Transform headModel = headTransform.GetChild(0);
+                //         Transform readyMeHead = headModel.Find("Hips/Spine/Neck/Head");
+                //         if (readyMeHead != null) {
+                //             Debug.Log("readyMeHead FOUND!");
+                //             Transform actualHead = readyMeHead;
+                //             headTransform = actualHead;
 
-                }   
-            }
-            
-            else {
-                Debug.Log("readyMeHead NOT FOUND!");
-                headTransform =headTransform;
-            }
-        }
-        if (bodyTransform) {
-            if (bodyTransform.childCount > 0) {
-                Transform bodyModel = bodyTransform.GetChild(0);
-                Transform neckModel = bodyModel.Find("Hips/Spine/Neck");
-                if (neckModel != null) {
-                    bodyTransform= neckModel;
-                }
-            }
+                //         }   
+                //     }
+                    
+                //     else {
+                //         Debug.Log("readyMeHead NOT FOUND!");
+                //         headTransform = headTransform;
+                //     }
+                // }
+                if (bodyTransform) {
+                    if (bodyTransform.childCount > 0) {
+                        Transform bodyModel = bodyTransform.GetChild(0);
+                        Transform neckModel = bodyModel.Find("Hips/Spine/Neck");
+                        if (neckModel != null) {
+                            // bodyTransform= neckModel;
+                            neckModel.position = bodyTransform.position;
+                            
+                            neckModel.localRotation = bodyTransform.localRotation;
+                            Transform headModel = neckModel.Find("Head");
+                            if (headModel != null) {
+                                Debug.Log("readyMeHead inside Body FOUND!");
+                                // Transform actualHead = headModel;
+                                // headTransform = actualHead;
+                                headModel.localRotation = headTransform.localRotation;
+                                // headModel.position = headTransform.position;
+                            }  
+                            else {
+                                Debug.Log("readyMeHead inside Body NOT FOUND!");
+                            }
 
-            else {
-                Debug.Log("Neck NOT FOUND!");
-                bodyTransform = bodyTransform;
-            }
+                        }
+                        
+                    }
+
+                    else {
+                        Debug.Log("Neck NOT FOUND!");
+                        bodyTransform = bodyTransform;
+                    }
+                    }
         }
+        
     }
 
     public void Update()
@@ -212,6 +237,9 @@ public class MultiplayerVRSynchronization : MonoBehaviour, IPunObservable
             rightHandTransform.localPosition = Vector3.MoveTowards(rightHandTransform.localPosition, this.m_NetworkPosition_RightHand, this.m_Distance_RightHand * (1.0f / PhotonNetwork.SerializationRate));
             rightHandTransform.localRotation = Quaternion.RotateTowards(rightHandTransform.localRotation, this.m_NetworkRotation_RightHand, this.m_Angle_RightHand * (1.0f / PhotonNetwork.SerializationRate));
 
+            if (isGrabbing) {
+
+            }
         }
     }
 

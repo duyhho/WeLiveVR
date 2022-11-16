@@ -22,6 +22,7 @@ public class XRHandController : MonoBehaviour
     private float threeFingersValue;
     
     public bool isMine = false;
+    public bool isReadyPlayerMe = true;
 
     // Start is called before the first frame update
     void Start()
@@ -84,22 +85,29 @@ public class XRHandController : MonoBehaviour
             thumbValue -= thumbMoveSpeed;
         }
         thumbValue = Mathf.Clamp(thumbValue, 0, 1);
+        if (isReadyPlayerMe) {
+                if (handType == HandType.Left)
+                {
+                // Debug.Log("indexValue" + indexValue.ToString());
+                animator.SetFloat("Index", indexValue);
+                // animator.SetFloat("Index", 0.5f);
 
-        if (handType == HandType.Left)
-        {
-           // Debug.Log("indexValue" + indexValue.ToString());
-        animator.SetFloat("Index", indexValue);
-        // animator.SetFloat("Index", 0.5f);
-
-        animator.SetFloat("ThreeFingers", threeFingersValue);
-        animator.SetFloat("Thumb", thumbValue);
+                animator.SetFloat("ThreeFingers", threeFingersValue);
+                animator.SetFloat("Thumb", thumbValue);
+                }
+                else if (handType == HandType.Right) {
+                // Debug.Log("indexValue" + indexValue.ToString());
+                animator.SetFloat("Index_Right", indexValue);
+                animator.SetFloat("ThreeFingers_Right", threeFingersValue);
+                animator.SetFloat("Thumb_Right", thumbValue);
+                }
         }
-        else if (handType == HandType.Right) {
-        // Debug.Log("indexValue" + indexValue.ToString());
-        animator.SetFloat("Index_Right", indexValue);
-        animator.SetFloat("ThreeFingers_Right", threeFingersValue);
-        animator.SetFloat("Thumb_Right", thumbValue);
+        else {
+            animator.SetFloat("Index", indexValue);
+            animator.SetFloat("ThreeFingers", threeFingersValue);
+            animator.SetFloat("Thumb", thumbValue);
         }
+        
         
     }
 

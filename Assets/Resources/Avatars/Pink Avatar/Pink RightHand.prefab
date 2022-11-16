@@ -1347,7 +1347,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 1
   thumbMoveSpeed: 0.1
-  isMine: 0
+  isMine: 1
+  isReadyPlayerMe: 1
 --- !u!95 &9091456502690274043
 Animator:
   serializedVersion: 3
