@@ -32,25 +32,30 @@ public class RoomManagerEditorScript : Editor
             roomManager.OnEnterButtonClicked_Clinic();
 
         }
-        if (GUILayout.Button("Join Dream 1"))
-        {
-            roomManager.OnEnterButtonClicked_Dream1();
 
-        }
-        if (GUILayout.Button("Join Dream 2"))
+        if (GUILayout.Button("Join XR Room"))
         {
-            roomManager.OnEnterButtonClicked_Dream2();
-
+            roomManager.OnEnterButtonClicked_XRroom();
         }
-        if (GUILayout.Button("Join Dream 3"))
-        {
-            roomManager.OnEnterButtonClicked_Dream3();
+        // if (GUILayout.Button("Join Dream 1"))
+        // {
+        //     roomManager.OnEnterButtonClicked_Dream1();
 
-        }
-        if (GUILayout.Button("Join Dream 4"))
-        {
-            roomManager.OnEnterButtonClicked_Dream4();
+        // }
+        // if (GUILayout.Button("Join Dream 2"))
+        // {
+        //     roomManager.OnEnterButtonClicked_Dream2();
 
-        }
+        // }
+        // if (GUILayout.Button("Join Dream 3"))
+        // {
+        //     roomManager.OnEnterButtonClicked_Dream3();
+
+        // }
+        // if (GUILayout.Button("Join Dream 4"))
+        // {
+        //     roomManager.OnEnterButtonClicked_Dream4();
+
+        // }
     }
 }

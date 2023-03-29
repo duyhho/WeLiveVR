@@ -1648,6 +1648,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerName_InputName: {fileID: 584187402}
+  names:
+  - Thomas
+  - Regal
+  - Jenny
+  - Plum
+  - Addy
 --- !u!1 &1381115762
 GameObject:
   m_ObjectHideFlags: 0

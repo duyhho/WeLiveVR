@@ -12,6 +12,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public TextMeshProUGUI OccupancyRateText_Clinic;
     public TextMeshProUGUI OccupancyRateText_Meeting;
     public TextMeshProUGUI OccupancyRateText_Classroom;
+    public TextMeshProUGUI OccupancyRateText_XRroom;
+
 
 
 
@@ -116,6 +118,11 @@ public class RoomManager : MonoBehaviourPunCallbacks
                 PhotonNetwork.LoadLevel("Classroom Multiplayer");
 
             }
+            else if ((string)mapType == MultiplayerVRConstants.MAP_TYPE_VALUE_XR_ROOM)
+            {
+                PhotonNetwork.LoadLevel("XR_Room");
+
+            }
         }
     }
     public void OnEnterButtonClicked_Outdoor()
@@ -172,6 +179,12 @@ public class RoomManager : MonoBehaviourPunCallbacks
         ExitGames.Client.Photon.Hashtable expectedCustomRoomProperties = new ExitGames.Client.Photon.Hashtable() { { MultiplayerVRConstants.MAP_TYPE_KEY, mapType } };
         PhotonNetwork.JoinRandomRoom(expectedCustomRoomProperties, 0);
     }
+    public void OnEnterButtonClicked_XRroom()
+    {
+        mapType = MultiplayerVRConstants.MAP_TYPE_VALUE_XR_ROOM;
+        ExitGames.Client.Photon.Hashtable expectedCustomRoomProperties = new ExitGames.Client.Photon.Hashtable() { { MultiplayerVRConstants.MAP_TYPE_KEY, mapType } };
+        PhotonNetwork.JoinRandomRoom(expectedCustomRoomProperties, 0);
+    }
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log(newPlayer.NickName + " just joined! Current Player Count:" + PhotonNetwork.CurrentRoom.PlayerCount);
@@ -180,6 +193,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         if (roomList.Count == 0)
         {
+            Debug.Log("There is no room");
+
             //There is no room
             OccupancyRateText_School.text = 0 + " / " + 20;
             OccupancyRateText_Outdoor.text = 0 + " / " + 20;
@@ -214,6 +229,11 @@ public class RoomManager : MonoBehaviourPunCallbacks
                 Debug.Log("Room is Classroom. Player count is: " + room.PlayerCount);
                 OccupancyRateText_Classroom.text = room.PlayerCount + " / " + 20;
             }
+            else if (room.Name.Contains(MultiplayerVRConstants.MAP_TYPE_VALUE_XR_ROOM))
+            {
+                Debug.Log("Room is Classroom. Player count is: " + room.PlayerCount);
+                OccupancyRateText_XRroom.text = room.PlayerCount + " / " + 20;
+            }
 
 
         }
@@ -222,7 +242,10 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        Debug.Log("Joined the Lobby");
+        Debug.Log("Joined the Lobby " + PhotonNetwork.ServerAddress );
+        Debug.Log("Count of Player on Master: "+ PhotonNetwork.CountOfPlayersOnMaster);
+        Debug.Log("Count of Players: "+ PhotonNetwork.CountOfPlayers);
+
     }
     #endregion
 

@@ -16,7 +16,7 @@ MonoBehaviour:
     AppIdRealtime: db39b701-02b5-40cf-a7e2-70824dfb6820
     AppIdFusion: 
     AppIdChat: 
-    AppIdVoice: f44a94a9-2071-471d-88c3-8af3905a12c7
+    AppIdVoice: db39b701-02b5-40cf-a7e2-70824dfb6820
     AppVersion: 0.1
     UseNameServer: 1
     FixedRegion: 
