@@ -37,10 +37,10 @@ public class Lite6APIRequest : MonoBehaviour
     {
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
-        StartCoroutine(GetRequest("http://192.168.0.217:5000/trocar/pickup"));
+        // StartCoroutine(GetRequest("http://192.168.0.217:5000/trocar/pickup"));
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
 
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
@@ -173,8 +173,8 @@ public class Lite6APIRequest : MonoBehaviour
     {
         
         Debug.Log("Application ending after " + Time.time + " seconds");
-        StartCoroutine(GetRequest("http://192.168.0.217:5000/trocar/replace"));
-        // StartCoroutine(GetRequest("http://192.168.0.217:5000/reset")); //call this to scale positions;
+        // StartCoroutine(GetRequest("http://192.168.0.217:5000/trocar/replace"));
+        StartCoroutine(GetRequest("http://192.168.0.217:5000/reset")); //call this to scale positions;
 
 
     }

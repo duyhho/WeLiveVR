@@ -4,12 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - robot
   - Floor
   - FxTemporaire
   - board
   - Brush
   - LeftHand
   - RightHand
+  - ground
   layers:
   - Default
   - TransparentFX

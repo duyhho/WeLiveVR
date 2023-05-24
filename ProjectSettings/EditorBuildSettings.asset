@@ -54,7 +54,7 @@ EditorBuildSettings:
     path: Assets/Scenes/FruitNinja.unity
     guid: a338ae2c37c75fa4393e3ef8a114bf36
   - enabled: 0
-    path: Assets/Scenes/Digital Twins/New Scene.unity
+    path: Assets/Scenes/Digital Twins/API Lite 6 - Right Controller.unity
     guid: a299df63fd5181a47a7bef861a70ce82
   - enabled: 1
     path: Assets/IRONHEAD Games/Scenes/Solutions/Multiplayer/XR_Room.unity
