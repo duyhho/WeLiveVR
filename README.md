@@ -1,5 +1,5 @@
 # WeLiveVR
-Authors: Duy Ho
+Author(s): Duy Ho
 
 ## Award: 
 - v1: 1st place (Spring 2022) - `https://info.umkc.edu/hack-a-roo/spring-2022-t-mobile-track-2/`
