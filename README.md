@@ -12,6 +12,8 @@ Our project, WeLive intends to show user two universes in Metaverse: one that is
 In these virtual worlds, our users can interact with the environment and other users in various ways. Such experience is refreshing, enjoyable and offers infinite possibilities for future development. 
 
 # V1 (Spring 2022)
+![image](https://github.com/duyhho/WeLiveVR/assets/17374092/a8874659-8044-43b4-a116-4d9f54ee0091)
+
 ## Main Features
 ### Realistic 3D Scenarios:
 - Gymnasium
@@ -79,6 +81,8 @@ In these virtual worlds, our users can interact with the environment and other u
 ![media10](https://github.com/duyhho/WeLiveVR/blob/FruitNinja-Custom/Media/media10.gif)
 
 # V2 (Fall 2022)
+![image](https://github.com/duyhho/WeLiveVR/assets/17374092/bd9db119-82d8-4b92-84a7-d9d03846c75b)
+
 Focus: Enhanced single-player experience with haptics, lip sync, and real-time interaction with objects.
 
 ### Entertainment and Fitness:
@@ -109,9 +113,10 @@ Focus: Enhanced single-player experience with haptics, lip sync, and real-time i
 ### Medical Training
 #### At-home Medical Training (Controller-based)
 - **3D surgical devices with responsive real-time visual/audio feedback and built-in haptics.**
+- ### [![Controller-based](https://img.youtube.com/vi/iasvHwjaKyU/0.jpg)](https://youtu.be/iasvHwjaKyU)
 #### At-home Medical Training (Hand-based)
 - **3D surgical devices with responsive real-time visual/audio feedback.**
-### [![Use case: Trocar Surgery with Visual, Audio, and Haptic feedback](https://img.youtube.com/vi/iasvHwjaKyU/0.jpg)](https://youtu.be/iasvHwjaKyU)
+### [![Hand-based](https://img.youtube.com/vi/eaCS0GJ5O_s/0.jpg)](https://youtu.be/eaCS0GJ5O_s)
 
 Use case:
 Trocar Surgery with Visual, Audio, and Haptic feedback
